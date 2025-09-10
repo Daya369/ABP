@@ -1,0 +1,11 @@
+Cliente (id_cliente PK, nombre, email, telefono)
+   │
+   └──< Venta (id_venta PK, fecha, total, id_cliente FK)
+          │
+          └──< Detalle_Venta (id_detalle PK, cantidad, subtotal, id_venta FK, id_manga FK)
+                                                 │
+                                                 v
+                                          Manga (id_manga PK, titulo, genero, precio, stock, id_autor FK)
+                                                 │
+                                                 v
+                                          Autor (id_autor PK, nombre, pais)
