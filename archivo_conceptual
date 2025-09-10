@@ -1,0 +1,63 @@
+1. Cliente
+
+id_cliente (PK)
+
+nombre
+
+email
+
+teléfono
+
+2. Autor
+
+id_autor (PK)
+
+nombre
+
+país
+
+3. Manga
+
+id_manga (PK)
+
+título
+
+género
+
+precio
+
+stock
+
+id_autor (FK → Autor)
+
+4. Venta
+
+id_venta (PK)
+
+fecha
+
+total
+
+id_cliente (FK → Cliente)
+
+5. Detalle_Venta
+
+id_detalle (PK)
+
+cantidad
+
+subtotal
+
+id_venta (FK → Venta)
+
+id_manga (FK → Manga)
+
+Relaciones
+
+Cliente – Venta: Un cliente puede realizar muchas ventas → (1:N).
+
+Venta – Detalle_Venta: Una venta puede tener muchos detalles → (1:N).
+
+Manga – Detalle_Venta: Un manga puede estar en muchos detalles de ventas → (1:N).
+
+Autor – Manga: Un autor puede haber creado muchos mangas → (1:N).
